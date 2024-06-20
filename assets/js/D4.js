@@ -148,9 +148,9 @@ upperFirst('ciao a tutti mi chiamo pietro romano e frequento il corso epicode')
 */
 console.log("***** esercizio 9 *****");
 
-function cutString(str) {
-    if (str.length > 2) {
-        return str.slice(1, -1);
+function cutString(string) {
+    if (string.length > 2) {
+        return string.slice(1, -1);
     } else {
         return '';
     }
