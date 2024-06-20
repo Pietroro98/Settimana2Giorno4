@@ -148,14 +148,14 @@ upperFirst('ciao a tutti mi chiamo pietro romano e frequento il corso epicode')
 */
 console.log("***** esercizio 9 *****");
 
-/*function cutString(str) {
+function cutString(str) {
     if (str.length > 2) {
         return str.slice(1, -1);
     } else {
         return '';
     }
 }
-console.log(cutString('EPICODE'));*/
+console.log(cutString('EPICODE'));
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
