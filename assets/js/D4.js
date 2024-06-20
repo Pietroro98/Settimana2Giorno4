@@ -118,7 +118,7 @@ console.log(reverseString("EPICODE"));
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 console.log("***** esercizio 8 *****");
-
+/* cercato su google per aiutarmi
 function upperFirst(str) {
   let words = str.split(' ');
   for (let i = 0; i < words.length; i++) {
@@ -126,21 +126,36 @@ function upperFirst(str) {
   }
   return words.join(' ');
 }
-console.log(upperFirst("ciao a tutti"));
+console.log(upperFirst("ciao a tutti mi chiamo pietro romano e frequento il corso epicode"));*/
+
+function upperFirst(string) {
+    string = string.toLowerCase();
+  let words = string.split(' ');
+  let final = [];
+  for (let i = 0; i < words.length; i++) {
+    let first = words[i].charAt(0);
+    first = first.toUpperCase();
+    let cut = words[i].slice(1);
+    let newWord = first + cut;
+    final.push(newWord);
+  }
+  console.log(final.join(' '));
+}
+upperFirst('ciao a tutti mi chiamo pietro romano e frequento il corso epicode')
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
 console.log("***** esercizio 9 *****");
 
-function cutString(str) {
+/*function cutString(str) {
     if (str.length > 2) {
         return str.slice(1, -1);
     } else {
         return '';
     }
 }
-console.log(cutString('EPICODE'));
+console.log(cutString('EPICODE'));*/
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
@@ -148,11 +163,11 @@ console.log(cutString('EPICODE'));
 console.log("***** esercizio 10 *****");
 
 function giveMeRandom(n) {
-    let result = [];
-    for (let i = 0; i < n; i++) {
-        let randomNumber = Math.abs(Math.random() * 11);
-        result.push(randomNumber);
-    }
-    return result;
+  let result = [];
+  for (let i = 0; i < n; i++) {
+    let randomNumber = Math.abs(Math.random() * 11);
+    result.push(randomNumber);
+  }
+  return result;
 }
 console.log(giveMeRandom(10));
